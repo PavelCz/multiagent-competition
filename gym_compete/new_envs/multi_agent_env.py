@@ -1,6 +1,5 @@
 import numpy as np
 from gym import Env, spaces
-from mujoco_py import MujocoException
 
 from .multi_agent_scene import MultiAgentScene
 from .agents import *
