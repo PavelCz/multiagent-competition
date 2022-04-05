@@ -2,7 +2,19 @@
 
 This repository contains the environments for the paper [Emergent Complexity via Multi-agent Competition](https://arxiv.org/abs/1710.03748)
 
-This branch is updated to be compatible with MuJoCo 2.1.
+This branch updates the HumanCompatibleAI fork to make gym_compete compatible with MuJoCo 2.1.
+
+List of changes:
+- Remove Python 2 and 3 compatibility code with six.
+- Updates for mujoco_py changes
+  - `env.model` -> `env.sim`
+  - Some attributes were renamed.
+- Update for compatiblity with newer version of `numpy`.
+- Some agents clipped actions before calculating rewards, some didn't. Now there is consistently no clipping.
+- The `numarrows` attribute in xml was removed due to it having no function.
+- Remove copied code of `openai/gym`'s `mujoco_env` in favor of importing from gym.
+- Remove `policy_py` which relies on `tensorflow<2`
+- Remove the `demo_tasks.sh` script which wasn't runnable due to prior changes in the HumanCompatibleAI fork.
 
 ## Dependencies
 Use `pip install -r requirements.txt` to install dependencies. If you haven't used MuJoCo before, please refer to the [installation guide](https://github.com/openai/mujoco-py).
