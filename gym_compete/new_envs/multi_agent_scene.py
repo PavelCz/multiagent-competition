@@ -41,17 +41,8 @@ class MultiAgentScene(mujoco_env.MujocoEnv):
     def viewer_setup(self):
         self.viewer.cam.trackbodyid = 0
         self.viewer.cam.distance = self.model.stat.extent * 0.55
-        # self.viewer.cam.distance = self.model.stat.extent * 0.65
-        # self.viewer.cam.distance = self.model.stat.extent * 1.5
-        # self.viewer.cam.lookat[2] += .8
         self.viewer.cam.elevation = -10
-        # self.viewer.cam.distance = self.model.stat.extent * 0.4
-        # self.viewer.cam.lookat[2] += 1.0
-        # self.viewer.cam.elevation = -25
-        # self.viewer.cam.azimuth = 0 if np.random.random() > 0.5 else 180
         self.viewer.cam.azimuth = 90
-        # self.viewer.vopt.flags[8] = True
-        # self.viewer.vopt.flags[9] = True
         rand = self.np_random.random()
         if rand < 0.33:
             self.viewer.cam.azimuth = 0
