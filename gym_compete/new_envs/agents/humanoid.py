@@ -4,9 +4,10 @@ import numpy as np
 
 
 def mass_center(mass, xpos):
-    # I think the reshape is necessary because np got stricter about broadcasting dims of size 1 vs dims of size 0, if not this calculation might be wrong
-    return (np.sum(mass.reshape(-1, 1) * xpos, 0) / np.sum(mass))[0]
-
+    # mass: (13,)
+    # mass[:, np.newaxis]: (13, 1)
+    # In some older versions of mujoco, shape was (13, 1), in some change prior to 2.1 this was change to (13,) which is why extending the axis is necessary
+    return (np.sum(mass[:, np.newaxis] * xpos, 0) / np.sum(mass))[0]
 
 class Humanoid(Agent):
 
