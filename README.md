@@ -34,7 +34,7 @@ pip install -e .
 
 Or use pip to install / add to requirements as
 ```bash
-gym_compete @ git+https://github.com/HumanCompatibleAI/multiagent-competition.git@v0.1.0
+gym_compete @ git+https://github.com/HumanCompatibleAI/multiagent-competition.git@mujoco21
 ```
 Check install is successful by coming out of the directory and trying `import gym_compete` in python console.
 
