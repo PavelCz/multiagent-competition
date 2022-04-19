@@ -1,3 +1,5 @@
+This repo contains my changes to make `gym_compete` compatible with MuJoCo 2.1. I am keeping this repo around in archived form to preserve some of the changes I made. The most up-to-date version of the MuJoCo 2.1 compatibility is at [HumanCompatibleAI/multiagent-competition](https://github.com/HumanCompatibleAI/multiagent-competition/tree/mujoco21).
+
 # Competitive Multi-Agent Environments - MuJoCo 2.1
 
 This repository contains the environments for the paper [Emergent Complexity via Multi-agent Competition](https://arxiv.org/abs/1710.03748)
